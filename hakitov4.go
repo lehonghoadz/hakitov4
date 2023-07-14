@@ -23,6 +23,8 @@ import (
 	"syscall"
 )
 
+all tool [DDOS]
+
 const __version__  = "1.0.1"
 
 // const acceptCharset = "windows-1251,utf-8;q=0.7,*;q=0.7" // use it for runet
