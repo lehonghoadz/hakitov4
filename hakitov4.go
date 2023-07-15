@@ -7531,7 +7531,7 @@ func main() {
 	}
 
 	go func() {
-		fmt.Println("-- 
+	logo[	fmt.Println("-- 
       ___           ___     
      /\  \         /\  \    
      \:\  \        \:\  \   
@@ -7542,8 +7542,8 @@ func main() {
   \::/__/       \::/__/     
    \:\  \        \:\  \     
     \:\__\        \:\__\    
-     \/__/         \/__/    
- --\n           Hulk4\n\n")
+     \/__/         \/__/   
+ --")\n    ]       Hulk4\n\n")
 		ss := make(chan uint8, 8)
 		var (
 			err, sent int32
